@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Skill Shoot</title>
+
+      <!-- ----------------------------font-awesome-------------------------------------------------- -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+      <!-- ----------------------------font family--------------------------------------------------- -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+      <!-- tailwindjs -->
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+      <!-- -----------------------Dasiy UI----------- -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+      <style type="text/tailwindcss">
+            .Poppins{
+                  font-family: "Poppins", sans-serif;
+            }
+            .btn-bgcolor{
+                  background-color: #CB8461;
+            }
+            .btn-hover:hover{
+                  background-color: #CB8461;
+            }
+            .primary{
+                  background-color: #245D51;
+            }
+      </style>
+</head>
+
+<body>
+      <header class="primary">
+            <!-- -----------------------------------------------navber start-----------------------------------------------  -->
+            <nav class="navber w-4/5 mx-auto flex items-center py-5 justify-between Poppins">
+                  <div class="">
+                        <a href="index.html"><img src="./image/Logo.png" alt="logo"></a>
+                  </div>
+                  <div class=" hidden lg:block">
+                        <ul class="text-white text-lg flex gap-[30px] transition duration-400">
+                              <li class="hover:font-semibold"><a href="">Home</a></li>
+                              <li class="hover:font-semibold"><a href="">Course</a></li>
+                              <li class="hover:font-semibold"><a href="">Subscribe</a></li>
+                              <li class="hover:font-semibold"><a href="">About</a></li>
+                              <li class="hover:font-semibold"><a href="">Testimoni</a></li>
+                        </ul>
+                  </div>
+                  <div class="text-white text-lg hidden lg:block transition duration-400">
+                        <button class=" pr-5 btn-hover hover:rounded-md px-8 py-2">Login</button>
+                        <button class="btn-bgcolor rounded-md px-8 py-2 ">Register</button>
+                  </div>
+
+                  <div class="drop_down block lg:hidden">
+                        <div class="dropdown dropdown-end ">
+                              <div tabindex="0" role="button">
+                                    <a href=""><img src="./image/ep_menu.png" alt=""></a>
+                              </div>
+                              <ul tabindex="0"
+                                    class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                    <li class="hover:font-medium"><a href="">Home</a></li>
+                                    <li class="hover:font-medium"><a href="">Course</a></li>
+                                    <li class="hover:font-medium"><a href="">Subscribe</a></li>
+                                    <li class="hover:font-medium"><a href="">About</a></li>
+                                    <li class="hover:font-medium"><a href="">Testimoni</a></li>
+                                    <li>
+                                          <button class=" pr-5 btn-hover hover:rounded-md px-8 py-2">Login</button>
+                                          <button class="btn-bgcolor rounded-lg px-8 py-2 ">Register</button>
+                                    </li>
+                              </ul>
+                        </div>
+                  </div>
+
+            </nav>
+            <!-- -----------------------------------------------navber end-------------------------------------------------  -->
+            <!-- -----------------------------------------------hero start-----------------------------------------------  -->
+            <div class="hero w-[90%] lg:w-4/5 mx-auto flex lg:justify-between py-6 lg:pb-0 bg-[url(./image/sm-header.png)] bg-no-repeat lg:bg-none Poppins">
+                  <!-- -----------------------------------left side---------------------------------- -->
+                  <div class=" text-center  lg:text-left  lg:w-2/5 text-white lg:pr-12 relative">
+                        <h1 class="font-semibold px-9 lg:px-0 text-[28px] lg:font-bold lg:text-6xl/normal">There is always something new for us to learn</h1>
+                        <img src="./image/Vector 1.png" alt="Vector1" class=" absolute top-11 left-[200px] w-[100px] lg:top-[85px] lg:left-60 lg:w-56">
+
+                        <p class="text-[#c8c8c8] text-xs/5 pt-3 px-5 lg:text-lg/normal lg:pr-14 lg:pl-0">we have created
+                              more than 100+ materials on various things that will help your career, with mentors who
+                              are experienced in their fields.</p>
+
+                        <div class=" lg:flex gap-6 items-center my-8">
+                              <button
+                                    class="text-base mb-6 lg:mb-0 lg:text-xl font-bold btn-bgcolor rounded-lg px-10 py-3 text-white ">
+                                    Start Journey
+                                    <i class="fa-solid fa-arrow-right fa-rotate-by"
+                                          style="--fa-rotate-angle: -50deg;"></i>
+                              </button>
+                              <div class="icon text-white text-base lg:text-2xl">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <i class="fa-brands fa-twitter mx-3"></i>
+                                    <i class="fa-brands fa-discord"></i>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- -----------------------------------right side---------------------------------- -->
+                  <div class="hidden lg:block place-items-center w-2/4 relative">
+
+                        <img src="./image/HR.png" alt="image" class="ml-auto">
+
+                        <div class="absolute rounded-xl bottom-48 left-64 text-center bg-white/90 p-5">
+                              <div class="  flex gap-2  items-start ">
+                                    <img src="./image/WNoLnJo7tS8.png" alt="" class="w-10">
+                                    <div class="text-left">
+                                          <h4 class="font-semibold text-xs ">Learn basic ui ux design</h4>
+                                          <p class="text-[10px] ">Today at 12 PM</p>
+                                          <button class="bg-[#FF4F8E] mx-auto mt-2 text-white rounded-lg font-semibold text-xs px-6 py-2">Join Now </button>
+                                    </div>
+                                    
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <!-- -----------------------------------------------hero end-----------------------------------------------  -->
+      </header>
+      <!-- -----------------------------------------------header end-------------------------------------------------  -->
+
+      <!-- -------------------------------------------------than 100+ start-----------------------------------------------  -->
+      <div class="w-4/5 mx-auto py-20 Poppins">
+            <div class=" text-center">
+                  <h2 class="text-[#2C2C2C] font-semibold lg:text-4xl/normal mb-3">Trusted more than <span
+                              class="text-[#CB8461]">100+</span> in the world</h2>
+                  <p class="text-[#808080] lg:w-2/4 lg:mx-auto px-10 lg:px-28 text-xs/6 lg:text-base/8">they have asked
+                        us more than 3 times to teach their employees about various things. to improve their skills</p>
+            </div>
+            <div class="grid gap-5 grid-rows-3 grid-cols-2 lg:grid-rows-1 lg:grid-cols-5  place-items-center pt-10">
+                  <img src="./image/image 11.png" alt="uber">
+                  <img src="./image/image 12.png" alt="googol">
+                  <img src="./image/image 13.png" alt="paypal">
+                  <img src="./image/image 14.png" alt="microsoft">
+                  <img src="./image/image 15.png" alt="dribbble" class="col-span-2 lg:col-span-1">
+            </div>
+      </div>
+      <!-- -------------------------------------------------than 100+ end-------------------------------------------------  -->
+
+      <!-- -------------------------------------------------Happy Chinese start-----------------------------------------  -->
+      <div class="w-4/5 mx-auto bg-[#F2E7DB] lg:mt-24 rounded-xl relative Poppins">
+            <div
+                  class="  lg:bg-[url(./image/Happy-Chinese2.png)] lg:px-14 lg:py-9 bg-no-repeat bg-cover bg-center lg:flex lg:justify-between lg:items-center rounded-xl z-10">
+                  <div class="py-10 lg:py-0 lg:bg-none lg:w-2/5 lg:my-12  text-center lg:text-left">
+                        <img src="./image/IntersectT.png" alt="Intersect" class="block lg:hidden absolute top-0">
+                        <h2 class="text-[#2C2C2C] text-lg font-semibold lg:text-4xl/normal ">Happy <span
+                                    class="text-[#CB8461]">Chinese New Year</span>, 20% discount for you today</h2>
+                        <button
+                              class="text-sm lg:text-xl lg:font-bold primary rounded-lg px-6 py-3 mt-8 mb-12 lg:mb-0 text-white">Subscribe
+                              Course</button>
+                        <img src="./image/IntersectC.png" alt="Intersect"
+                              class="block lg:hidden absolute bottom-7 left-12">
+                        <img src="./image/IntersectB.png" alt="Intersect"
+                              class="block lg:hidden absolute bottom-0 right-0">
+                  </div>
+                  <div class=" hidden lg:block absolute bottom-0 right-40 z-10">
+                        <img src="./image/header.png" alt="student" class="h-[500px]">
+                  </div>
+            </div>
+      </div>
+      <!-- -------------------------------------------------Happy Chinese end--------------------------------------------  -->
+      
+      <!-- ---------------------------------------------Why do we exist? start------------------------------------------  -->
+      <div class="w-4/5 flex flex-col justify-between lg:flex-row text-center lg:text-left mx-auto py-20 Poppins">
+            <!-- -------------------left side------------- -->
+            <div class="lg:w-2/6">
+                  <h2 class="text-[#2C2C2C] font-semibold lg:text-4xl mb-3">Why do we <span class="text-[#CB8461]">exist?</span></h2>
+
+                  <p class="text-[#808080] text-xs/6 lg:text-base/8 lg:pr-20">Because we know that many people or companies have the same problem when it comes to how difficult it is to improve their skills</p>
+                  
+                  <div class=" flex gap-2 justify-center lg:justify-start items-center mt-10">
+                        <img src="./image/d1UPkiFd04A.png" alt="" class="w-12 lg:w-16">
+                        <div class="text-left">
+                              <h4 class="font-semibold text-xs lg:text-lg">Jerony Pulquosta</h4>
+                              <p class=" text-[#808080] text-xs">CEO Skill Shoot</p>
+                        </div>
+                  </div>
+
+                  <div class="mx-auto lg:mx-0 w-44 lg:w-96 mt-12 border-b-2 border-slate-200"></div>
+
+                  <div class="mt-10 flex gap-10 justify-center lg:justify-start">
+                        <div class="">
+                              <h2 class="text-[#2C2C2C] font-semibold lg:text-4xl mb-3">100+</h2>
+                              <p class=" text-[#808080] text-xs">Updated Material</p>
+                        </div>
+                        <div class="">
+                              <h2 class="text-[#2C2C2C] font-semibold lg:text-4xl mb-3">15k</h2>
+                              <p class=" text-[#808080] text-xs">Member Join</p>
+                        </div>
+                  </div>
+            </div>
+            <!-- -------------------right side------------- -->
+            <div class="lg:w-1/2">
+                  <div class="grid lg:grid-cols-2 lg:grid-rows-2 gap-10 mt-10">
+                        <div class="">
+                              <img src="./image/Group42.png" alt="" class="mx-auto lg:mx-0">
+                              <h3 class="text-[#245D51] font-semibold lg:text-2xl my-3">Material Limitations</h3>
+                              <p class="text-[#808080] px-10 lg:px-0 text-xs/6 lg:text-base/8 lg:pr-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="">
+                              <img src="./image/Group55.png" alt="" class="mx-auto lg:mx-0">
+                              <h3 class="text-[#245D51] font-semibold lg:text-2xl my-3">Unprofessional Mentor</h3>
+                              <p class="text-[#808080] px-10 lg:px-0 text-xs/6 lg:text-base/8 lg:pr-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="">
+                              <img src="./image/Group56.png" alt="" class="mx-auto lg:mx-0">
+                              <h3 class="text-[#245D51] font-semibold lg:text-2xl my-3">Video Quality</h3>
+                              <p class="text-[#808080] px-10 lg:px-0 text-xs/6 lg:text-base/8 lg:pr-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="">
+                              <img src="./image/Group54.png" alt="" class="mx-auto lg:mx-0">
+                              <h3 class="text-[#245D51] font-semibold lg:text-2xl my-3">High Price</h3>
+                              <p class="text-[#808080] px-10 lg:px-0 text-xs/6 lg:text-base/8 lg:pr-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- ---------------------------------------------Why do we exist? end------------------------------------------  -->
+
+      <!-- ------------------------------------------courses of the week start--------------------------------------------  -->
+      <div class="primary py-12 mt-20">
+            <div class="w-4/5 mx-auto Poppins">
+                  <div class=" text-center relative">
+                        <h2 class="text-white lg:font-semibold lg:text-4xl/normal mb-3">Popular courses of the week</h2>
+                        <p class="text-[#c8c8c8] lg:w-2/4 lg:mx-auto px-8 lg:px-48 text-xs/6 lg:text-base/8">List of the most popular lists that are often studied by our members</p>
+                        <img src="./image/ornamen.png" alt="" class="hidden lg:block absolute lg:top-1/2 lg:left-20">
+                        <img src="./image/ornamenSM.png" alt="" class=" block lg:hidden absolute -top-6 -left-4">
+                        <img src="./image/IntersectC.png" alt="Intersect" class=" absolute -top-3 right-2 lg:top-7 lg:right-24">
+                  </div>
+                  <!-- -------------------------------------part-top end---------------------------------- -->
+                  <!-- -------------------------------------Carousel Start---------------------------------- -->
+                   <div class="relative mt-10 mb-5">
+                        <div class="carousel flex lg:flex-row gap-4 overflow-hidden">
+                              <!-- ----------Carousel item-1------ -->
+                              <div class="carousel-item">
+                                    <div class=" w-[413px] mx-auto bg-white rounded-2xl overflow-hidden">
+                                          <div class="relative">
+                                                <img src="./image/v-1.png" alt="Course Thumbnail" class="w-full">
+                                                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-3 rounded-full z-10">
+                                                      <i class="fa-solid fa-play text-[#245D51]"></i>
+                                                </button>
+                                          </div>
+
+                                          <div class="p-3 lg:p-5">
+                                                <h3 class="text-lg lg:text-2xl lg:pr-16 font-semibold text-gray-800">Learn basic database structure</h3>
+
+                                                <div class="flex items-center justify-between mt-4 ">
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center">
+                                                            <img src="./image/unsplash_EZ4TYgXPNWk.png" alt="" class="">
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">Jerony Pulquosta</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">CEO Skill Shoot</p>
+                                                            </div>
+                                                      </div>
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center pr-2">
+                                                            <i class="fa-regular fa-user text-2xl text-[#245D51]"></i>
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">55</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">Participant</p>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="flex items-center bg-slate-50 justify-between px-5 py-4">
+                                                <button class="px-6 py-3 primary font-semibold text-white text-sm rounded-lg">Buy Now</button>
+                                                <p class="text-lg font-semibold text-gray-800">
+                                                      $180 <span class="text-xs font-normal text-gray-500">/20 Video</span>
+                                                </p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <!-- ----------Carousel item-2------ -->
+                              <div class="carousel-item">
+                                    <div class=" w-[413px] mx-auto bg-white rounded-2xl overflow-hidden">
+                                          <div class="relative">
+                                                <img src="./image/v-1.png" alt="Course Thumbnail" class="w-full">
+                                                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-3 rounded-full z-10">
+                                                      <i class="fa-solid fa-play text-[#245D51]"></i>
+                                                </button>
+                                          </div>
+
+                                          <div class="p-3 lg:p-5">
+                                                <h3 class="text-lg lg:text-2xl lg:pr-16 font-semibold text-gray-800">Learn basic database structure</h3>
+
+                                                <div class="flex items-center justify-between mt-4 ">
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center">
+                                                            <img src="./image/unsplash_EZ4TYgXPNWk.png" alt="" class="">
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">Jerony Pulquosta</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">CEO Skill Shoot</p>
+                                                            </div>
+                                                      </div>
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center pr-2">
+                                                            <i class="fa-regular fa-user text-2xl text-[#245D51]"></i>
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">55</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">Participant</p>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="flex items-center bg-slate-50 justify-between px-5 py-4">
+                                                <button class="px-6 py-3 primary font-semibold text-white text-sm rounded-lg">Buy Now</button>
+                                                <p class="text-lg font-semibold text-gray-800">
+                                                      $180 <span class="text-xs font-normal text-gray-500">/20 Video</span>
+                                                </p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <!-- ----------Carousel item-3------ -->
+                              <div class="carousel-item">
+                                    <div class=" w-[413px] mx-auto bg-white rounded-2xl overflow-hidden">
+                                          <div class="relative">
+                                                <img src="./image/v-1.png" alt="Course Thumbnail" class="w-full">
+                                                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-3 rounded-full z-10">
+                                                      <i class="fa-solid fa-play text-[#245D51]"></i>
+                                                </button>
+                                          </div>
+
+                                          <div class="p-3 lg:p-5">
+                                                <h3 class="text-lg lg:text-2xl lg:pr-16 font-semibold text-gray-800">Learn basic database structure</h3>
+
+                                                <div class="flex items-center justify-between mt-4 ">
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center">
+                                                            <img src="./image/unsplash_EZ4TYgXPNWk.png" alt="" class="">
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">Jerony Pulquosta</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">CEO Skill Shoot</p>
+                                                            </div>
+                                                      </div>
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center pr-2">
+                                                            <i class="fa-regular fa-user text-2xl text-[#245D51]"></i>
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">55</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">Participant</p>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="flex items-center bg-slate-50 justify-between px-5 py-4">
+                                                <button class="px-6 py-3 primary font-semibold text-white text-sm rounded-lg">Buy Now</button>
+                                                <p class="text-lg font-semibold text-gray-800">
+                                                      $180 <span class="text-xs font-normal text-gray-500">/20 Video</span>
+                                                </p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <!-- ----------Carousel item-3------ -->
+                              <div class="carousel-item">
+                                    <div class=" w-[413px] mx-auto bg-white rounded-2xl overflow-hidden">
+                                          <div class="relative">
+                                                <img src="./image/v-1.png" alt="Course Thumbnail" class="w-full">
+                                                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-3 rounded-full z-10">
+                                                      <i class="fa-solid fa-play text-[#245D51]"></i>
+                                                </button>
+                                          </div>
+
+                                          <div class="p-3 lg:p-5">
+                                                <h3 class="text-lg lg:text-2xl lg:pr-16 font-semibold text-gray-800">Learn basic database structure</h3>
+
+                                                <div class="flex items-center justify-between mt-4 ">
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center">
+                                                            <img src="./image/unsplash_EZ4TYgXPNWk.png" alt="" class="">
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">Jerony Pulquosta</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">CEO Skill Shoot</p>
+                                                            </div>
+                                                      </div>
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center pr-2">
+                                                            <i class="fa-regular fa-user text-2xl text-[#245D51]"></i>
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">55</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">Participant</p>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="flex items-center bg-slate-50 justify-between px-5 py-4">
+                                                <button class="px-6 py-3 primary font-semibold text-white text-sm rounded-lg">Buy Now</button>
+                                                <p class="text-lg font-semibold text-gray-800">
+                                                      $180 <span class="text-xs font-normal text-gray-500">/20 Video</span>
+                                                </p>
+                                          </div>
+                                    </div>
+                              </div>
+                              <!-- ----------Carousel item-4------ -->
+                              <div class="carousel-item">
+                                    <div class=" w-[413px] mx-auto bg-white rounded-2xl overflow-hidden">
+                                          <div class="relative">
+                                                <img src="./image/v-1.png" alt="Course Thumbnail" class="w-full">
+                                                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-3 rounded-full z-10">
+                                                      <i class="fa-solid fa-play text-[#245D51]"></i>
+                                                </button>
+                                          </div>
+
+                                          <div class="p-3 lg:p-5">
+                                                <h3 class="text-lg lg:text-2xl lg:pr-16 font-semibold text-gray-800">Learn basic database structure</h3>
+
+                                                <div class="flex items-center justify-between mt-4 ">
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center">
+                                                            <img src="./image/unsplash_EZ4TYgXPNWk.png" alt="" class="">
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">Jerony Pulquosta</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">CEO Skill Shoot</p>
+                                                            </div>
+                                                      </div>
+                                                      <div class=" flex gap-2 justify-center lg:justify-start items-center pr-2">
+                                                            <i class="fa-regular fa-user text-2xl text-[#245D51]"></i>
+                                                            <div class="text-left">
+                                                                  <h4 class="font-semibold text-xs lg:text-sm">55</h4>
+                                                                  <p class=" text-[#808080] text-[10px]">Participant</p>
+                                                            </div>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="flex items-center bg-slate-50 justify-between px-5 py-4">
+                                                <button class="px-6 py-3 primary font-semibold text-white text-sm rounded-lg">Buy Now</button>
+                                                <p class="text-lg font-semibold text-gray-800">
+                                                      $180 <span class="text-xs font-normal text-gray-500">/20 Video</span>
+                                                </p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                        <button class=" p-3 mr-5 rounded-full absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2">
+                              <img src="./image/Group-l.png" alt="left-arrow">
+                        </button>
+                        <button class=" p-3 rounded-full absolute top-1/2 -right-24 transform -translate-x-1/2 -translate-y-1/2">
+                              <img src="./image/Group-r.png" alt="left-arrow">
+                        </button>
+                   </div>
+                  
+                  <!-- -------------------------------------Carousel End------------------------------------ -->
+            </div>
+      </div>
+      <!-- -------------------------------------------courses of the week end---------------------------------------------  -->
+
+      <!-- ---------------------------------------------Let us Skill Shoot start------------------------------------------  -->
+      <div class="w-4/5 lg:flex justify-between items-center text-left mx-auto pt-20 Poppins">
+            <!-- -------------------left side------------- -->
+            <div class="w-2/6 hidden lg:block relative">
+                  <img src="./image/Image (1).png" alt="">
+
+                  <div class="absolute bottom-12 rounded-xl right-24 text-center bg-slate-50/90 p-5">
+                        <div class="  flex gap-2  items-start ">
+                              <img src="./image/SE4Xc1WvIkU.png" alt="" class="w-10">
+                              <div class="text-left">
+                                    <h4 class="font-semibold text-xs ">How to build a team</h4>
+                                    <p class="text-[10px] text-left">Today at 12 PM</p>
+                                    <button class="bg-[#FF4F8E]  text-white rounded-lg font-semibold text-xs px-6 py-2">Join Now </button>
+                              </div>
+                              
+                        </div>
+                  </div>
+                  
+            </div>
+            <!-- -------------------right side------------- -->
+            <div class="lg:w-1/2 relative">
+                  <h2 class="text-[#2C2C2C] text-xl font-bold lg:text-5xl mb-8">Let us <span class="text-[#245D51]">Skill Shoot</span></h2>
+                  <img src="./image/Vector 1.png" alt="Vector1" class=" absolute top-6 left-16 w-28  lg:top-12 lg:left-40 lg:w-60">
+
+                  <p class="text-[#808080] text-xs/6 lg:text-base/8 lg:pr-56 my-3">We are a company engaged in education with the aim of improving the skills of many people and so that younger people can reach the career paths they want.</p>
+
+                  <p class="text-[#808080] text-xs/6 lg:text-base/8 lg:pr-56">we have been around since 2019 with currently 100+ updated materials and 15K members who have joined.</p>
+
+                  <div class="grid grid-cols-2 grid-rows-2 gap-10 mt-10">
+                        <div class=" flex gap-2 items-center">
+                              <img src="./image/jon.png" alt="">
+                              <p class="text-xs/6 lg:font-semibold lg:text-base/8">15K People Join</p>
+                        </div>
+                        <div class=" flex gap-2 items-center">
+                              <img src="./image/Mentor.png" alt="">
+                              <p class="text-xs/6 lg:font-semibold lg:text-base/8">Trusted Mentor</p>
+                        </div>
+                        <div class=" flex gap-2 items-center">
+                              <img src="./image/Video.png" alt="">
+                              <p class="text-xs/6 lg:font-semibold lg:text-base/8">30+ Free Videos</p>
+                        </div>
+                        <div class=" flex gap-2 items-center">
+                              <img src="./image/Premium.png" alt="">
+                              <p class="text-xs/6 lg:font-semibold lg:text-base/8">100+ Premium Videos</p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- ---------------------------------------------Let us Skill Shoot end------------------------------------------  -->
+
+      <!-- -----------------------------------------------Improve skills start----------------------------------------------  -->
+      <div class="w-4/5 mx-auto my-20 bg-[#F2E7DB] rounded-2xl relative">
+            <div class="lg:p-16  Poppins lg:flex justify-between ">
+                  <div class=" lg:w-[45%] py-10 lg:py-0 lg:bg-none lg:my-12  text-center lg:text-left">
+
+                        <img src="./image/IntersectT.png" alt="Intersect" class=" absolute top-0 left-0 lg:w-16">
+
+                        <h2 class="text-[#2C2C2C] mx-10 lg:mx-0 text-lg font-semibold lg:text-4xl/normal"><span class="text-[#CB8461]">Improve</span> your skills, and reach your career as soon as possible</h2>
+                  </div>
+                  <div class="lg:w-1/2 gap-x-2 flex flex-col lg:flex-row justify-end items-center">
+                        <button
+                              class="w-1/2 lg:w-auto text-base mb-2 lg:mb-0 lg:text-xl lg:font-bold btn-bgcolor rounded-lg px-6 py-3 text-white ">
+                              Join Now</button>
+                        <button
+                              class="w-3/5 lg:w-auto text-base lg:text-xl lg:font-bold primary rounded-lg px-6 py-3 mb-12 lg:mb-0 text-white ">Subscribe
+                              Course</button>
+                        <img src="./image/ornamen.png" alt="Intersect"
+                              class="hidden lg:block absolute -bottom-6 right-[500px]">
+                        <img src="./image/ornamenSM.png" alt="Intersect"
+                              class="block lg:hidden absolute bottom-24 -right-3">
+                  </div>
+
+            </div>
+
+      </div>
+      <!-- -----------------------------------------------Improve skills  end---------------------------------------------  -->
+
+      <!-- -------------------------------------------------pricing start-------------------------------------------------  -->
+      <div class="w-4/5 mx-auto mb-28 Poppins">
+            <!-- -----------------------------------top section----------------------------------- -->
+            <div class=" text-center mb-16">
+                  <h2 class="text-[#2C2C2C] font-semibold lg:text-4xl/normal mb-3"><span class="text-[#CB8461]">Subscribe</span> with us now</h2>
+                  <p class="text-[#808080] lg:w-2/4 lg:mx-auto px-10 lg:px-28 text-xs/6 lg:text-base/8"> by subscribing now you will be able to access the material easily and cheaply, so you will be very efficient and benefit</p>
+            </div>
+            <!-- -----------------------------------bottom section----------------------------------- -->
+            <div class=" flex flex-col lg:flex-row lg:justify-around items-center  ">
+                  <!-- ----------card-1----- -->
+                  <div class="card w-[292px] lg:w-[390px] ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-[#245D51] transition duration-300 rounded-[36px] hover:text-white hover:shadow-2xl hover:shadow-teal-950/90 group">
+                        <div class="card-body">
+
+                              <div class="">
+                                    <h2 class=" text-3xl font-bold ">$50 <span class="pl-2 lg:text-base font-normal">/1 month</span></h2>
+                              </div>
+
+                              <h2 class="text-3xl font-bold mt-4">Base</h2>
+
+                              <p class="w-2/3 text-xs/6 text-[#808080] group-hover:text-white lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+                              <ul class="mt-6 flex flex-col gap-2 text-base">
+                                    <li>
+                                          <i class="fa-solid fa-check "></i>
+                                          <span>Access all videos</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span>Get Certificate</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span>Chat support</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span>Update Notification</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span class="">Download material</span>
+                                    </li>
+                              </ul>
+                              <div class="mt-6 text-center">
+                                    <button class="w-full rounded-full font-medium text-base group-hover:bg-[#CB8461] py-4 px-8  text-[#FDC2A5] group-hover:text-white">Choose plan</button>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- ----------card-2----- -->
+                  <div class="card w-[292px] lg:w-[390px] my-10 primary rounded-[36px] text-white ease-in-out -translate-y-1 scale-110 transition duration-300 shadow-2xl shadow-teal-950/90">
+                        <div class="card-body">
+                              <div class="text-right">
+                                    <span class="py-2 px-3 text-[10px] font-semibold rounded-3xl btn-bgcolor">MOST
+                                          POPULAR</span>
+                              </div>
+
+                              <div class="">
+                                    <h2 class="text-3xl font-bold ">$100 <span class="pl-2 text-base font-normal">/6
+                                                month</span></h2>
+                              </div>
+                              <h2 class="text-3xl font-bold mt-4">Pro</h2>
+                              <p class="w-2/3 text-white text-xs/6 lg:text-base">Lorem Ipsum is simply dummy text of the printing </p>
+                              <ul class="mt-6 flex flex-col gap-2 text-base">
+                                    <li>
+                                          <i class="fa-solid fa-check "></i>
+                                          <span>Access all videos</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span>Get Certificate</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span>Chat support</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span>Update Notification</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span class="">Download material</span>
+                                    </li>
+                              </ul>
+                              <div class="mt-6 text-center">
+                                    <button class="w-full rounded-full font-medium text-base btn-bgcolor py-4 px-8 ">Choose plan</button>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- ----------card-3----- -->
+                  <div class="card w-[292px] lg:w-[390px]  ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-[#245D51] transition duration-300 rounded-[36px] hover:text-white hover:shadow-2xl hover:shadow-teal-950/90 group">
+                        <div class="card-body">
+                              <div class="">
+                                    <h2 class="text-3xl font-bold ">$200 <span class="pl-2 text-base font-normal">/12 month</span></h2>
+                              </div>
+                              <h2 class="text-3xl font-bold mt-4">Enterprise</h2>
+                              <p class="w-2/3 text-[#808080] group-hover:text-white text-xs/6 lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                              <ul class="mt-6 flex flex-col gap-2 text-base">
+                                    <li>
+                                          <i class="fa-solid fa-check "></i>
+                                          <span>Access all videos</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span>Get Certificate</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span>Chat support</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span>Update Notification</span>
+                                    </li>
+                                    <li>
+                                          <i class="fa-solid fa-check"></i>
+                                          <span class="">Download material</span>
+                                    </li>
+                              </ul>
+                              <div class="mt-6 text-center">
+                                    <button class="w-full rounded-full font-medium text-base group-hover:bg-[#CB8461] py-4 px-8  text-[#FDC2A5] group-hover:text-white">Choose plan</button>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!-- -------------------------------------------------pricing end-------------------------------------------------  -->
+
+      <!-- ---------------------------------------------What do they say? start--------------------------------------------  -->
+      <div class=" bg-slate-50 py-20 Poppins">
+            <div class="w-4/5 mx-auto">
+                  <div class=" text-center mb-16 relative">
+                        <h2 class="text-[#2C2C2C] lg:font-semibold lg:text-4xl/normal mb-3">What do they <span class="text-[#CB8461]">say?</span></h2>
+                        <p class="text-[#808080] lg:w-2/4 lg:mx-auto px-10 lg:px-28 text-xs/6 lg:text-base/8">This is an honest review from members who have joined us</p>
+                        <img src="./image/ornamenGreen.png" alt="" class=" block lg:hidden absolute -top-2 -left-2">
+                        <img src="./image/ornamenGreen2.png" alt="Intersect" class=" block lg:hidden absolute -top-3 right-2 lg:top-7 lg:right-24">
+                  </div>
+                  <!-- ---------card start------- -->
+                  <div class=" carousel flex lg:flex-row gap-5">
+                        <!-- ---------card 01------- -->
+                         <div class="carousel-item">
+                              <div class="w-[335px] lg:w-[413px] mx-auto bg-white rounded-lg p-6 text-center relative border-b-8 border-white hover:border-green-900">
+
+                                    <img src="./image/say1.png" alt="Say-2" class="mx-auto">
+            
+                                    <div class="flex justify-center mt-3 text-orange-300 text-xl">
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <h3 class="mt-2 text-lg font-medium text-gray-800">Nany Brugman</h3>
+                                    <p class="mt-2 text-gray-500 text-sm leading-relaxed"> I am quite satisfied, because the skills I want or dream of can really be mastered</p>
+                              </div>
+                         </div>
+                        
+                        <div class="carousel-item">
+                              <div class="w-[335px] lg:w-[413px] mx-auto bg-white rounded-lg p-6 text-center relative border-b-8 border-white hover:border-green-900">
+
+                                    <img src="./image/say2.png" alt="Say-2" class="mx-auto">
+            
+                                    <div class="flex justify-center mt-3 text-orange-300 text-xl">
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <h3 class="mt-2 text-lg font-medium text-gray-800">Nany Brugman</h3>
+                                    <p class="mt-2 text-gray-500 text-sm leading-relaxed"> I am quite satisfied, because the skills I want or dream of can really be mastered</p>
+                              </div>
+                         </div>
+
+                        <div class="carousel-item">
+                              <div class="w-[335px] lg:w-[413px] mx-auto bg-white rounded-lg p-6 text-center relative border-b-8 border-white hover:border-green-900">
+
+                                    <img src="./image/say3.png" alt="Say-2" class="mx-auto">
+            
+                                    <div class="flex justify-center mt-3 text-orange-300 text-xl">
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <h3 class="mt-2 text-lg font-medium text-gray-800">Nany Brugman</h3>
+                                    <p class="mt-2 text-gray-500 text-sm leading-relaxed"> I am quite satisfied, because the skills I want or dream of can really be mastered</p>
+                              </div>
+                         </div>
+                        <!-- ---------card 02------- -->
+                         <div class="carousel-item">
+                              <div class="w-[335px] lg:w-[413px] mx-auto bg-white rounded-lg p-6 text-center relative border-b-8 border-white hover:border-green-900">
+
+                                    <img src="./image/say1.png" alt="Say-2" class="mx-auto">
+            
+                                    <div class="flex justify-center mt-3 text-orange-300 text-xl">
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <h3 class="mt-2 text-lg font-medium text-gray-800">Nany Brugman</h3>
+                                    <p class="mt-2 text-gray-500 text-sm leading-relaxed"> I am quite satisfied, because the skills I want or dream of can really be mastered</p>
+                              </div>
+                         </div>
+                        
+                        <div class="carousel-item">
+                              <div class="w-[335px] lg:w-[413px] mx-auto bg-white rounded-lg p-6 text-center relative border-b-8 border-white hover:border-green-900">
+
+                                    <img src="./image/say2.png" alt="Say-2" class="mx-auto">
+            
+                                    <div class="flex justify-center mt-3 text-orange-300 text-xl">
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <h3 class="mt-2 text-lg font-medium text-gray-800">Nany Brugman</h3>
+                                    <p class="mt-2 text-gray-500 text-sm leading-relaxed"> I am quite satisfied, because the skills I want or dream of can really be mastered</p>
+                              </div>
+                         </div>
+
+                        <div class="carousel-item">
+                              <div class="w-[335px] lg:w-[413px] mx-auto bg-white rounded-lg p-6 text-center relative border-b-8 border-white hover:border-green-900">
+
+                                    <img src="./image/say3.png" alt="Say-2" class="mx-auto">
+            
+                                    <div class="flex justify-center mt-3 text-orange-300 text-xl">
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <h3 class="mt-2 text-lg font-medium text-gray-800">Nany Brugman</h3>
+                                    <p class="mt-2 text-gray-500 text-sm leading-relaxed"> I am quite satisfied, because the skills I want or dream of can really be mastered</p>
+                              </div>
+                         </div>
+                        
+                  </div>
+                  <div class="py-10 mx-auto text-center">
+                        <button class="bg-white p-3 mr-5 rounded-full">
+                              <img src="./image/arrow-down.png" alt="left-arrow">
+                        </button>
+                        <button class="btn-bgcolor p-3 rounded-full">
+                              <img src="./image/akar-icons_arrow-down.png" alt="left-arrow">
+                        </button>
+                  </div>
+            </div>
+            
+      </div>
+      <!-- ---------------------------------------------What do they say? end---------------------------------------------  -->
+
+      <!-- -------------------------------------------------footer start-------------------------------------------------  -->
+      <footer class="primary pt-28 Poppins">
+            <div class="w-4/5 mx-auto text-center bg-[url(./image/footer.png)] bg-center bg-no-repeat lg:pb-32">
+                  <h2 class="pb-5 text-white px-16 lg:px-0 text-lg lg:text-4xl ">Subscribe to get notified about update</h2>
+                  <p class="text-[#c8c8c8] px-10 lg:px-0 font-light text-xs lg:text-base pb-5">By subscribing with your mail, you will accept our privacy policy</p>
+
+                  <form action="" class="inline-block ">
+                        <input type="email"
+                              class="bg-white/10 font-medium px-8 py-4 rounded-lg outline-none border-none placeholder-shown:text-white"
+                              placeholder="Enter your email" />
+                        <button class="font-medium mt-4 lg:ml-4 text-lg btn-bgcolor rounded-md px-8 py-4 text-white">Subscribe
+                              us</button>
+                  </form>
+
+            </div>
+            <div class="w-4/5 mx-auto text-center flex flex-col lg:flex-row justify-between items-center py-10">
+                  <div class="pt-3 order-last lg:order-first lg:pt-0">
+                        <a href="index.html"><img src="./image/Logo.png" alt="logo"></a>
+                  </div>
+                  <div class="">
+                        <ul class="text-white text-lg gap-20 lg:flex order-first lg:order-last lg:gap-[30px]">
+                              <li class="hover:font-medium"><a href="">Home</a></li>
+                              <li class="hover:font-medium"><a href="">Course</a></li>
+                              <li class="hover:font-medium"><a href="">Subscribe</a></li>
+                              <li class="hover:font-medium"><a href="">About</a></li>
+                              <li class="hover:font-medium"><a href="">Testimoni</a></li>
+                        </ul>
+                  </div>
+            </div>
+      </footer>
+      <!-- -------------------------------------------------footer end-------------------------------------------------  -->
+</body>
+
+</html>
